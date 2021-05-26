@@ -1,15 +1,22 @@
-var noOfDrums=document.querySelectorAll(".drum").length;
-for(var i=0 ; i<noOfDrums; i++){
+var number =document.querySelectorAll(".drum").length;
+for(i=0 ; i< number;i++ ){
 
-    document.querySelectorAll(".drum")[i].addEventListener("click",function(){
-        
-      var buttonInnerHtml=this.innerHTML;
-       
+  // button detection
+  document.querySelectorAll(".drum")[i].addEventListener("click",function(){
+ var buttonInnerHtml=this.innerHTML;
+ makesound(buttonInnerHtml);
 });
 }
 
+// key detection
+document.addEventListener("keypress",function(event){
+  makesound(event.key);
+});
 
-  switch (buttonInnerHtml){
+
+
+function makesound(key){
+  switch(key){
         case "w":
           var tom1 = new Audio("tom-1.mp3");
           tom1.play();
@@ -42,4 +49,4 @@ for(var i=0 ; i<noOfDrums; i++){
         alert("invalid");
         break;
       }
-
+}
