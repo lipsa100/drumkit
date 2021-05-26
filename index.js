@@ -3,7 +3,7 @@ for(var i=0 ; i<noOfDrums; i++){
 
     document.querySelectorAll(".drum")[i].addEventListener("click",function(){
         
-      var buttonInnerhtml=this.innerHTML;
+      var buttonInnerHtml=this.innerHTML;
        makesound(buttonInnerHtml);
  recentbutton(buttonInnerHtml);
 });
