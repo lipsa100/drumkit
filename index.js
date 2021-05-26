@@ -1,11 +1,19 @@
 var noOfDrums=document.querySelectorAll(".drum").length;
 for(var i=0 ; i<noOfDrums; i++){
 
-    document.querySelectorAll(".drum")[i].addEventListener("click",function(){
-        
-      var buttonInnerhtml=this.innerhtml;
+     document.querySelectorAll(".drum")[i].addEventListener("click",function(){
+
+
+ var buttonInnerHTML = this.innerHTML;
+
+makesound(buttonInnerHTML);
+recentbutton(buttonInnerHTML);
+});
+
+}
       
-      switch(buttonInnerhtml){
+   function makesound(key){
+  switch (key){
         case "w":
           var tom1 = new Audio("tom-1.mp3");
           tom1.play();
