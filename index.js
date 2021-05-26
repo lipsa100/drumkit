@@ -3,7 +3,7 @@ for(var i=0 ; i<noOfDrums; i++){
 
     document.querySelectorAll(".drum")[i].addEventListener("click",function(){
         
-      var buttonInnerhtml=this.innerhtml;
+      var buttonInnerhtml=this.innerHTML;
       
       switch(buttonInnerhtml){
         case "w":
