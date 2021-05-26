@@ -1,5 +1,5 @@
-var number =document.querySelectorAll(".drum").length;
-for(i=0 ; i< number;i++ ){
+var noOfDrums =document.querySelectorAll(".drum").length;
+for(var i=0 ; i< noOfDrums;i++ ){
 
   // button detection
   document.querySelectorAll(".drum")[i].addEventListener("click",function(){
