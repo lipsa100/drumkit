@@ -4,8 +4,21 @@ for(var i=0 ; i<noOfDrums; i++){
     document.querySelectorAll(".drum")[i].addEventListener("click",function(){
         
       var buttonInnerhtml=this.innerHTML;
-      
-      switch(buttonInnerhtml){
+       makesound(buttonInnerHtml);
+ recentbutton(buttonInnerHtml);
+});
+}
+
+// key detection
+document.addEventListener("keypress",function(event){
+  makesound(event.key);
+  recentbutton(event.key);
+});
+
+
+
+function makesound(key){
+  switch(key){
         case "w":
           var tom1 = new Audio("tom-1.mp3");
           tom1.play();
